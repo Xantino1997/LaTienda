@@ -22,7 +22,7 @@ const SeguimientoCompra = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/compra/${codigoSeguimiento}`
+        `https://la-tienda-backend.vercel.app/api/compra/${codigoSeguimiento}`
       );
       if (!res.ok) throw new Error("Compra no encontrada.");
 
