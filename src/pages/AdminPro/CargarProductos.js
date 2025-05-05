@@ -37,7 +37,7 @@ const CargarProducto = () => {
         "compra" + selectedProveedor.nombreEmpresa.replace(/\s/g, "");
       try {
         const res = await fetch(
-          `http://localhost:5000/api/compra/proveedor/${nombreColeccion}`
+          `https://la-tienda-backend.vercel.app/api/compra/proveedor/${nombreColeccion}`
         );
         const data = await res.json();
         setProductosProveedor(data);
@@ -62,7 +62,7 @@ const CargarProducto = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/products");
+      const res = await fetch("https://la-tienda-backend.vercel.app/api/products");
       const data = await res.json();
       const formatted = data.map((p) => ({
         ...p,
@@ -76,7 +76,7 @@ const CargarProducto = () => {
 
   const fetchProveedores = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/proveedor");
+      const res = await fetch("https://la-tienda-backend.vercel.app/api/proveedor");
       const data = await res.json();
       setProveedores(data);
 
@@ -117,7 +117,7 @@ const CargarProducto = () => {
     formData.append("image", file);
 
     try {
-      const res = await fetch("http://localhost:5000/api/upload", {
+      const res = await fetch("https://la-tienda-backend.vercel.app/api/upload", {
         method: "POST",
         body: formData,
       });
@@ -138,8 +138,8 @@ const CargarProducto = () => {
     e.preventDefault();
     const method = isEditing ? "PUT" : "POST";
     const url = isEditing
-      ? `http://localhost:5000/api/products/${form._id}`
-      : "http://localhost:5000/api/products";
+      ? `https://la-tienda-backend.vercel.app/api/products/${form._id}`
+      : "https://la-tienda-backend.vercel.app/api/products";
 
     const formToSend = {
       ...form,
@@ -204,7 +204,7 @@ const CargarProducto = () => {
 
     if (confirm.isConfirmed) {
       try {
-        const res = await fetch(`http://localhost:5000/api/products/${id}`, {
+        const res = await fetch(`https://la-tienda-backend.vercel.app/api/products/${id}`, {
           method: "DELETE",
         });
 
@@ -235,7 +235,7 @@ const CargarProducto = () => {
 
     if (confirm.isConfirmed) {
       try {
-        const res = await fetch("http://localhost:5000/api/products/bulk-delete", {
+        const res = await fetch("https://la-tienda-backend.vercel.app/api/products/bulk-delete", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ ids: selectedProducts }),
