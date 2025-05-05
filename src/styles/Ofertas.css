@@ -1,0 +1,150 @@
+.ofertas-section {
+    padding: 40px 20px;
+    margin-top:150px;
+    text-align: center;
+    background-color: #f1f9f8;
+  }
+  
+  .ofertas-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .ofertas-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Tarjeta con altura fija y layout estructurado */
+  .oferta-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 480px;
+    padding: 20px;
+    transition: transform 0.2s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .oferta-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Imagen con altura fija y ajuste visual */
+  .oferta-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Nombre del producto */
+  .oferta-card h3 {
+    font-size: 1.1rem;
+    margin: 10px 0 5px;
+    text-align: center;
+    min-height: 48px;
+  }
+  
+  /* Precio y descuento */
+  .oferta-card p {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 8px;
+  }
+  
+  .new-price {
+    color: #d32f2f;
+    font-weight: bold;
+  }
+  
+  .discount-label {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 0.85rem;
+  }
+  
+  /* Botón de agregar al carrito */
+  .oferta-button {
+    padding: 8px 20px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+  
+  .oferta-button:hover {
+    background-color: #00796b;
+  }
+  
+  /* Etiqueta superior */
+  .oferta-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff5252;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  /* Botón de compartir */
+  .share-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background-color: #ff6f00;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+  }
+  
+  .share-button:hover {
+    background-color: #e65100;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .ofertas-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .oferta-card {
+      width: 90%;
+      height: auto;
+    }
+  
+    .oferta-card img {
+      height: 200px;
+    }
+  }
+  

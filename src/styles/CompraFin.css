@@ -1,0 +1,136 @@
+.carrito-container {
+  max-width: 800px;
+  margin: 8rem auto 2rem; /* ↑ Aumentá el margen superior */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.carrito-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.carrito-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.carrito-item button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carrito-item button:hover {
+  background-color: #d32f2f;
+}
+
+.resumen-compra {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+.confirmar-btn,
+.volver-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.confirmar-btn {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.confirmar-btn:hover {
+  background-color: #1b5e20;
+}
+
+.volver-btn {
+  background-color: #1976d2;
+  color: white;
+}
+
+.volver-btn:hover {
+  background-color: #0d47a1;
+}
+.input-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-section label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.input-section input {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Responsive para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .carrito-container {
+    max-width: 800px;
+    margin: 8rem auto 2rem; /* ↑ Aumentá el margen superior */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+
+  .carrito-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item-info {
+    width: 100%;
+  }
+
+  .carrito-item button {
+    align-self: flex-end;
+  }
+
+  .resumen-compra {
+    text-align: left;
+    font-size: 1rem;
+  }
+}

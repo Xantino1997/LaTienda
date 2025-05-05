@@ -1,0 +1,58 @@
+.splash-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f8ff;
+  }
+  
+  .logo-grid {
+    width: 200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    position: relative;
+  }
+  
+  .logo-piece {
+    background-image: url("../assets/logo.png");
+    background-size: 300%;
+    transition: transform 2.5s ease-in-out;
+    animation: scatter 2.5s ease-in, gather 2.5s 2.5s ease-out;
+  }
+  
+  @keyframes scatter {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(
+        calc(var(--x) * 30px),
+        calc(var(--y) * 30px)
+      ) rotate(15deg);
+    }
+  }
+  
+  @keyframes gather {
+    0% {
+      transform: translate(
+        calc(var(--x) * 30px),
+        calc(var(--y) * 30px)
+      ) rotate(15deg);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  .piece-0 { background-position: 0% 0%; --x: -1; --y: -1; }
+  .piece-1 { background-position: 50% 0%; --x: 0; --y: -1; }
+  .piece-2 { background-position: 100% 0%; --x: 1; --y: -1; }
+  .piece-3 { background-position: 0% 50%; --x: -1; --y: 0; }
+  .piece-4 { background-position: 50% 50%; --x: 0; --y: 0; }
+  .piece-5 { background-position: 100% 50%; --x: 1; --y: 0; }
+  .piece-6 { background-position: 0% 100%; --x: -1; --y: 1; }
+  .piece-7 { background-position: 50% 100%; --x: 0; --y: 1; }
+  .piece-8 { background-position: 100% 100%; --x: 1; --y: 1; }
+  

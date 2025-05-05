@@ -1,0 +1,92 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 1rem;
+    background: #f2f2f2;
+  }
+  
+  .auth-form {
+    background: white;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .auth-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .auth-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 1rem;
+  }
+  
+  .auth-form input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 0.3rem;
+  }
+  
+  .auth-button {
+    margin-top: 1.5rem;
+    background-color: #2e8b57;
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3s;
+  }
+  
+  .auth-button:hover {
+    background-color: #256f46;
+  }
+  
+  .auth-links {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+  }
+  
+  .auth-links a {
+    color: #2e8b57;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  
+  .auth-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 👁 Estilo para ver la contraseña */
+  .password-wrapper {
+    position: relative;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+  }
+  
+  @media (max-width: 480px) {
+    .auth-form {
+      padding: 1.5rem;
+    }
+  }
+  
