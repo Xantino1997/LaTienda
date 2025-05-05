@@ -46,7 +46,7 @@ export default function ClienteRegister() {
     gustos.forEach((gusto) => formData.append("gustos[]", gusto));
 
     try {
-      const res = await fetch("http://localhost:5000/api/cliente/registrar", {
+      const res = await fetch("https://la-tienda-backend.vercel.app/api/cliente/registrar", {
         method: "POST",
         body: formData,
       });
