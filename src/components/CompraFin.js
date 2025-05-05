@@ -71,7 +71,7 @@ export default function CarritoSimple() {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/compras", {
+      const response = await fetch("https://la-tienda-backend.vercel.app/api/compras", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dataCompra)
@@ -136,7 +136,7 @@ export default function CarritoSimple() {
 
     try {
       const mpResponse = await fetch(
-        "http://localhost:5000/api/mercadopago/create_preference",
+        "https://la-tienda-backend.vercel.app/api/mercadopago/create_preference",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
