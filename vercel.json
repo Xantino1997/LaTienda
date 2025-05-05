@@ -1,21 +1,6 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "LaTienda/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "LaTienda/build"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/LaTienda/$1"
-    }
-  ],
-  "framework": "create-react-app",
-  "buildCommand": "cd LaTienda && npm install && npm run build",
-  "outputDirectory": "LaTienda/build"
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": "build",
+  "framework": "create-react-app"
 }
