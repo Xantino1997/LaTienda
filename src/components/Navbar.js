@@ -143,7 +143,7 @@ export default function Navbar() {
                 <img
                   src={
                     proveedor.imagen
-                      ? `http://localhost:5000/uploads/${proveedor.imagen}`
+                      ? `https://la-tienda-backend.vercel.app/uploads/${proveedor.imagen}`
                       : Logo
                   }
                   alt={proveedor.nombreEmpresa || "Proveedor"}
@@ -158,7 +158,7 @@ export default function Navbar() {
                 <img
                   src={
                     user.imagen
-                      ? `http://localhost:5000/uploads/${user.imagen}`
+                      ? `https://la-tienda-backend.vercel.app/uploads/${user.imagen}`
                       : Logo
                   }
                   alt={user.name || "Cliente"}
