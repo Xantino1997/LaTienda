@@ -12,7 +12,7 @@ const ClientePro = () => {
   useEffect(() => {
     const fetchCliente = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/cliente/${id}`);
+        const res = await fetch(`https://la-tienda-backend.vercel.app/api/cliente/${id}`);
         const data = await res.json();
         setCliente(data);
       } catch (err) {
@@ -69,7 +69,7 @@ const ClientePro = () => {
         {/* INFO del cliente */}
         <div className="admin-card">
           <img
-            src={`http://localhost:5000/uploads/${cliente.imagen}`}
+            src={`https://la-tienda-backend.vercel.app/uploads/${cliente.imagen}`}
             alt="Avatar cliente"
             className="admin-avatar"
           />
