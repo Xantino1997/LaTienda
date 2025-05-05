@@ -30,7 +30,7 @@ export default function ProveedorRegister() {
     }
   
     try {
-      const res = await fetch("http://localhost:5000/api/proveedor/registrar", {
+      const res = await fetch("https://la-tienda-backend.vercel.app/api/proveedor/registrar", {
         method: "POST",
         body: formData,
       });
