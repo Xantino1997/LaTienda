@@ -46,7 +46,7 @@ const HomePage = () => {
   }, []);
 
   const fetchProducts = () => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://la-tienda-backend.vercel.app/api/products")
       .then((res) => res.json())
       .then((data) => {
         // Ordenamos por fecha más reciente
