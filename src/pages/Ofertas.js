@@ -33,7 +33,7 @@ const Ofertas = () => {
 
   // Obtiene productos de la API
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://la-tienda-backend.vercel.app/api/products")
       .then((res) => res.json())
       .then((data) => {
         const ofertas = data.filter((p) => p.oferta === "Sí");
