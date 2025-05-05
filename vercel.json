@@ -5,7 +5,7 @@
       "src": "LaTienda/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "lATIENDA/build"
+        "distDir": "LaTienda/build"
       }
     }
   ],
