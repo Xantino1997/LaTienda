@@ -1,24 +1,22 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "package.json",
-        "use": "@vercel/static-build"
-      },
-      {
-        "src": "api/**/*.js",
-        "use": "@vercel/node"
+  "version": 2,
+  "builds": [
+    {
+      "src": "LaTienda/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "LaTienda/build"
       }
-    ],
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "/api/$1.js"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/build/index.html"
-      }
-    ]
-  }
-  
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/lATIENDA/$1"
+    }
+  ],
+  "framework": "create-react-app",
+  "ignoreCommand": "echo 'ignorar warnings'",
+  "buildCommand": "cd LaTienda && npm install && npm run build",
+  "outputDirectory": "LaTienda/build"
+}
