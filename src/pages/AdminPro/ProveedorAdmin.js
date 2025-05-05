@@ -16,7 +16,7 @@ const ProveedorAdmin = () => {
   useEffect(() => {
     const fetchProveedor = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/proveedor/${id}`);
+        const res = await fetch(`https://la-tienda-backend.vercel.app/api/proveedor/${id}`);
         const data = await res.json();
         setProveedor(data);
       } catch (err) {
@@ -51,7 +51,7 @@ const ProveedorAdmin = () => {
         "compra" + proveedor.nombreEmpresa.replace(/\s/g, "");
       try {
         const res = await fetch(
-          `http://localhost:5000/api/compra/proveedor/${nombreColeccion}`
+          `https://la-tienda-backend.vercel.app/api/compra/proveedor/${nombreColeccion}`
         );
         const data = await res.json();
         setProductosProveedor(data);
@@ -116,7 +116,7 @@ const ProveedorAdmin = () => {
 
         <div className="admin-card">
           <img
-            src={`http://localhost:5000/uploads/${proveedor.imagen}`}
+            src={`https://la-tienda-backend.vercel.app/uploads/${proveedor.imagen}`}
             alt="Avatar proveedor"
             className="admin-avatar"
           />
@@ -159,7 +159,7 @@ const ProveedorAdmin = () => {
                   <span className="offer-label">¡OFERTA!</span>
                 )}
                 <img
-                  src={`http://localhost:5000/uploads/${prod.productos[0].image}`}
+                  src={`https://la-tienda-backend.vercel.app/uploads/${prod.productos[0].image}`}
                   alt={prod.name}
                 />
                 <h3>{prod.direccion}</h3>
