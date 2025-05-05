@@ -99,9 +99,6 @@ export default function Navbar() {
             <li>
               <Link to="/ofertas">Ofertas</Link>
             </li>
-            <li>
-              <Link to="/categorias">Categorías</Link>
-            </li>
             {user?.isAdmin && (
               <li>
                 <Link to={`/adminproveedor/${proveedor?._id}`}>
