@@ -13,7 +13,7 @@ export default function ProVenta() {
       if (!user || !user.userId || user.role !== "proveedor") return;
 
       try {
-        const res = await fetch(`http://localhost:5000/api/compra`);
+        const res = await fetch(`https://la-tienda-backend.vercel.app/api/compra`);
         const data = await res.json();
 
         console.log("Datos traídos del backend:", data); // 👈 Log para ver las compras
