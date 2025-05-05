@@ -8,7 +8,7 @@ const LogoSplash = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       navigate("/home"); // Cambiá esto por la ruta de destino
-    }, 5000);
+    }, 2000);
 
     return () => clearTimeout(timeout);
   }, [navigate]);
