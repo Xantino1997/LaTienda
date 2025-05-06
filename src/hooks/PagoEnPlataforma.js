@@ -99,7 +99,7 @@ const CreditCard = () => {
           continue;
   
         await fetch(
-          `http://localhost:5000/api/products/update-stock/${item._id}`,
+          `https://la-tienda-backend.vercel.app/api/products/update-stock/${item._id}`,
           {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
