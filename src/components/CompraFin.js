@@ -92,7 +92,11 @@ export default function CarritoSimple() {
 
     return () => clearTimeout(timer); // Limpieza si el usuario abandona antes
   }, [direccion, documento, totalFinal,telefono]); 
-
+  
+ useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+  }, [cartItems]);
+  
   const handleRemove = (id) => {
     Swal.fire({
       title: "¿Eliminar producto?",
